@@ -5,17 +5,17 @@ POST http://localhost:3000/api/inmuebles
 Content-Type: application/json
 
 {
-    "piso": "C/ Doctor Fleming, 7",
-    "letra": "1º B",
-    "extension": 94,
+    "piso": "C/ En medio, 14",
+    "letra": "2º C",
+    "extension": 113,
     "num_hab": 3,
     "alquilado": true,
-    "nomb_prop": "Jose Miguel Correa Gómez",
-    "email": "jm_correa@gmail.com"
+    "nomb_prop": "Andrés Gómez Sánchez",
+    "email": "andres_gs@gmail.com"
 }
 
 ###
-PUT http://localhost:3000/api/inmuebles/6465ddde8c698b4239346b6a
+PUT http://localhost:3000/api/inmuebles/6465e0274d20c4072c63ef32
 Content-Type: application/json
 
 {
@@ -24,4 +24,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/api/inmuebles/6465ddde8c698b4239346b6a
+DELETE http://localhost:3000/api/inmuebles/6465e0274d20c4072c63ef32

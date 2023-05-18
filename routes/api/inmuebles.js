@@ -30,8 +30,15 @@ router.put('/:idInmueble', async (req, res) => {
     }
 });
 
-router.delete('/:idInmueble', (req, res) => {
-    res.send('Prueba DELETE');
+router.delete('/:idInmueble', async (req, res) => {
+    const { idInmueble } = req.params;
+
+    try {
+        const result = await Inmueble.findByIdAndDelete(idInmueble);
+        res.json(result);
+    } catch (error) {
+        res.json({ fatal: error.message });
+    }
 });
 
 module.exports = router;
