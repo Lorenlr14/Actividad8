@@ -1,7 +1,14 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
-    res.send('Prueba');
+const Inmueble = require('../../models/inmueble.model');
+
+router.get('/', async (req, res) => {
+    try {
+        const inmuebles = await Inmueble.find();
+        res.json(inmuebles);
+    } catch (error) {
+        res.json({ fatal: error.message });
+    }
 });
 
 router.post('/', (req, res) => {
