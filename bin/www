@@ -8,6 +8,12 @@ var app = require('../app');
 var debug = require('debug')('actividad8:server');
 var http = require('http');
 
+// Config Dotenv
+require('dotenv').config();
+
+// Config DB
+require('../config/db');
+
 /**
  * Get port from environment and store in Express.
  */
