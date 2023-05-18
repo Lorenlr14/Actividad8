@@ -20,8 +20,14 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/:idInmueble', (req, res) => {
-    res.send('Prueba PUT');
+router.put('/:idInmueble', async (req, res) => {
+    const { idInmueble } = req.params;
+    try {
+        const result = await Inmueble.findByIdAndUpdate(idInmueble, req.body, { new: true });
+        res.json(result);
+    } catch (error) {
+        res.json({ fatal: error.message });
+    }
 });
 
 router.delete('/:idInmueble', (req, res) => {

@@ -5,17 +5,23 @@ POST http://localhost:3000/api/inmuebles
 Content-Type: application/json
 
 {
-    "piso": "C/ En medio, 18",
-    "letra": "A",
-    "extension": 80,
-    "num_hab": 2,
-    "alquilado": false,
-    "nomb_prop": "Ángeles López Pérez",
-    "email": "angeles_lopez@gmail.com"
+    "piso": "C/ Doctor Fleming, 7",
+    "letra": "1º B",
+    "extension": 94,
+    "num_hab": 3,
+    "alquilado": true,
+    "nomb_prop": "Jose Miguel Correa Gómez",
+    "email": "jm_correa@gmail.com"
 }
 
 ###
-PUT http://localhost:3000/api/inmuebles/1
+PUT http://localhost:3000/api/inmuebles/6465ddde8c698b4239346b6a
+Content-Type: application/json
+
+{
+    "extension": 103,
+    "alquilado": true
+}
 
 ###
-DELETE http://localhost:3000/api/inmuebles/1
+DELETE http://localhost:3000/api/inmuebles/6465ddde8c698b4239346b6a

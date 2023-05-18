@@ -8,6 +8,6 @@ const inmuebleSchema = new Schema({
     alquilado: Boolean,
     nomb_prop: String,
     email: String
-});
+}, { timestamps: true, versionKey: false });
 
 module.exports = model('inmueble', inmuebleSchema);
