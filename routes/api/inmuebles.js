@@ -35,6 +35,9 @@ router.delete('/:idInmueble', async (req, res) => {
 
     try {
         const result = await Inmueble.findByIdAndDelete(idInmueble);
+        if (!result) {
+            return res.json({ fatal: 'El id del inmueble no existe' });
+        }
         res.json(result);
     } catch (error) {
         res.json({ fatal: error.message });
