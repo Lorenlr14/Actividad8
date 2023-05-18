@@ -11,8 +11,13 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.post('/', (req, res) => {
-    res.send('Prueba POST');
+router.post('/', async (req, res) => {
+    try {
+        const result = await Inmueble.create(req.body);
+        res.json(result);
+    } catch (error) {
+        res.json({ fatal: error.message });
+    }
 });
 
 router.put('/:idInmueble', (req, res) => {

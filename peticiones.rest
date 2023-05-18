@@ -2,6 +2,17 @@ GET http://localhost:3000/api/inmuebles
 
 ###
 POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso": "C/ En medio, 18",
+    "letra": "A",
+    "extension": 80,
+    "num_hab": 2,
+    "alquilado": false,
+    "nomb_prop": "Ángeles López Pérez",
+    "email": "angeles_lopez@gmail.com"
+}
 
 ###
 PUT http://localhost:3000/api/inmuebles/1
